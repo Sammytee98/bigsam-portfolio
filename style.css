@@ -1,0 +1,502 @@
+@media (min-width:300px) {
+html, body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-size: 13px;
+    scroll-behavior: smooth;
+}
+.container{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #D7E4C0;
+    padding: 0.6rem;
+}
+
+.container * {  
+    font-family: 'Barlow Semi Condensed', sans-serif; 
+}
+ h1{
+    font-size: 3rem;
+    margin: 0;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnP6SZy7kXKZsHHwBTdFJkIcIzSgpoJi9G_Q&usqp=CAU);
+    background-position: center;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: slideIn1 8s;
+}
+@keyframes gradient {
+    0% { background-position:0% 75%;}
+    50% { background-position:100% 50%;}
+    100% { background-position:0% 70%;}
+}
+ 
+.nav-pills{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    list-style: none;
+    animation: slideIn1 8s;
+}
+@keyframes slideIn1 {
+    0% { transform: translateY(-50%);}
+    50% { transform: translateY(0);}
+}
+.nav-link {
+    color: #000000;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+.nav-link::after {
+    bottom: -3px;
+    transform-origin: right;
+}
+.nav-link::before,
+.nav-link::after {
+    content: ''; left: 0;
+    position: absolute;
+    width: 100%; height: 2px;
+    background-color: #000000;
+    transform: scaleX(0);
+    transition: transform 0.50s;
+}
+.nav-link::before {
+    top: -3px;
+    transform-origin: left;
+}
+.nav-link:hover::before,
+.nav-link:hover::after,
+.active::before,
+.active::after {
+    transform: scaleX(1);
+}
+
+
+.home > h2 {
+    font-size: 3rem;
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: bolder;
+}
+.home > h3 {
+    font-size: 2rem;
+    font-family: 'Noto Sans', sans-serif;
+}
+.dev{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnP6SZy7kXKZsHHwBTdFJkIcIzSgpoJi9G_Q&usqp=CAU);
+    background-position: center;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.5rem;
+}
+.home > h4 {
+    font-family: 'Courgette', cursive;
+    font-size: 1.2rem;
+    font-weight: lighter;
+}
+.b-links {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    font-size: 1.2rem;
+    font-family: 'Frank Ruhl Libre', serif;
+    padding:1.9rem 1.2rem;
+    
+}
+.button {
+    border: none;
+    height: 3.7rem;
+    -webkit-box-reflect: below
+            1px linear-gradient(transparent,#0005);
+            box-shadow: 0 0 5px #D7E4C0, 0 0 15px #D7E4C0,
+            0 0 25px #D7E4C0, 0 0 100px #D7E4C0;
+    background-color: #D7E4C0;
+    cursor: pointer;
+}
+.button:hover{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnP6SZy7kXKZsHHwBTdFJkIcIzSgpoJi9G_Q&usqp=CAU);
+    background-position: center;
+    animation: bounce 2s;
+}
+@keyframes bounce{
+    0% {transform: translateY(0);}
+    40% { transform: translateY(-20px);}
+    60% { transform: translateY(-10px);}
+}
+.b-links:hover{
+    color: #ffffff;
+}
+.button-box {
+    display: flex;
+    gap: 3rem;
+    padding: 2.5rem 0;
+}
+.home{
+    display: flex;
+    flex-direction: column;
+    animation: slideIn 8s;
+}
+@keyframes slideIn {
+    0% { transform: translateX(-50%);}
+    50% { transform: translateX(0);}
+}
+.home-image{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+.image-container{
+    border-radius: 20px;
+    border: none;
+    margin-top: 50px;
+    animation: slideIn 8s;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: minmax(6.2rem, 50rem);
+}
+
+#home {
+    background-color: #000000;
+    padding: 1.2rem 1.2rem 6.2rem 1.2rem;
+    display: flex;
+    justify-content: center;
+}
+.name-box > * {
+    color: #ffffff;
+}
+
+.flex-container p {
+    font-family: 'Courgette', cursive;
+    font-size: 1.2rem;
+    font-weight: lighter;
+}
+.flex-container h2 {
+    font-size: 2.5rem;
+    font-family: "Permanent Marker", cursive;
+    font-weight: lighter;
+}
+.flex-container {
+    padding: 2.5rem 0.6rem;
+    display: grid;
+    grid-template-columns: minmax(6rem, 37.5rem);
+    animation: slideIn 8s;
+}
+.skill-head{
+    font-size: 2rem;
+    font-family: "Permanent Marker", cursive;
+}
+.skill-list{
+    font-family: 'Courgette', cursive;
+    font-size: 1.2rem;
+}
+.skill-container{
+    animation: slideIn 5s;
+    padding: 2.5rem 0.6rem;
+}
+#about {
+    padding: 1.2rem 1.2rem 3.7rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #d7e4c0;
+}
+ 
+.services-heading h2{
+    font-size: 2.5rem;
+    font-family: 'Frank Ruhl Libre', serif;
+    color: #D7E4C0;
+    margin: 0;
+}
+.services-heading hr {
+    border-color: #D7E4C0;
+}
+hr{
+    width: 100%;
+}
+.services-heading{
+    padding-bottom: 50px;
+    animation: slideIn 8s;
+}
+.services h3 {
+    font-family: "Permanent Marker", cursive; 
+    font-size: 1.8rem;
+    font-weight: lighter;
+}
+.services p {
+    font-family: 'Courgette', cursive;
+}
+.services {
+    border-radius: 10px;
+    border: 2px solid #d7e4c0;
+    background: transparent;
+    backdrop-filter: blur(8px);
+    padding: 0.6rem;
+}
+.grid{
+    display: grid;
+    grid-template-columns: minmax(6.2rem, 18.7rem);
+    gap: 2rem;
+    animation: slideIn 8s;
+}
+#services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3.1rem;
+    background-color: #000000;
+}
+.services * {
+    color: #D7E4C0;
+}
+
+.project-heading h2{
+    font-size: 2.5rem;
+    font-family: 'Frank Ruhl Libre', serif;
+    margin-bottom: 0;
+}
+.project-heading hr {
+    border-color: #000000;
+}
+.project-heading{
+    animation: slideIn 8s;
+}
+.project-box h3 {
+    font-size: 2rem;
+    font-family: "Permanent Marker", cursive; 
+    font-weight: lighter;
+}
+.project-box div {
+    border-radius: 10px;
+    border: 2px solid #D7E4C0;
+}
+.project-box img {
+    border-radius: 10px;
+    height: 150px;
+    width: 100%;
+}
+
+.project-box p {
+    font-size: 1.2rem;
+    font-family: 'Courgette', cursive;
+}
+.project-link {
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+    color: #D7E4C0;
+}
+.project-box button {
+    border: none;
+    border-radius: 10px;
+    background-color: #000000;
+    padding: 0.6rem;
+    margin-top: 0.6rem;
+    cursor: pointer;
+}
+.project-box button:hover{
+    animation: pulse 2s;
+}
+@keyframes pulse {
+    0%, 100% {transform: scale(1);}
+    50% { transform: scale(1,2);}
+}
+.projects-con {
+    display: grid;
+    grid-template-columns: minmax(6.2rem, 18.7rem);
+    grid-template-rows: repeat(5,1fr);
+    place-items: center;
+    gap: 40px;
+    animation: slideIn 8s;
+}
+#projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #D7E4C0;
+    padding: 1.5rem;
+}
+
+.contact-heading {
+    font-size: 2rem;
+    font-family: 'Frank Ruhl Libre', serif;
+    color: #ffffff;
+}
+.form-grid input {
+    border: 2px solid #D7E4C0;
+    border-radius: 5px;
+}
+.form-grid {
+    gap: 1.2rem;
+    display: grid;
+    grid-template-columns: minmax(50px, 150px);
+
+}
+.textarea{
+    margin-top: 1.2rem;
+    border: 2px solid #D7E4C0;
+    border-radius: 5px;
+    width: 230px;
+}
+.form-grid input, textarea {
+    background-color: #ffffff;
+    padding: 0.6rem;
+    font-weight: bolder;
+    font-size: 1rem;
+}
+input, textarea:focus {
+    border: none;
+}
+input[type="submit"] {
+    width: fit-content;
+    background-color: #D7E4C0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: 'Noto Sans', sans-serif;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #800080;
+    color: white;
+    animation: bounce 2s;
+}
+.contact{
+    padding-top: 1.2rem;
+}
+.contact-form{
+    padding: 2.5rem 1.2rem 3.7rem 1.2rem;
+    animation: slideIn 8s;
+}
+.contact-form > p {
+    font-family: 'Courgette', cursive;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+#contact-me{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnP6SZy7kXKZsHHwBTdFJkIcIzSgpoJi9G_Q&usqp=CAU);
+    background-position: cover;
+}
+
+
+.socials{
+    min-width: 6.2rem;
+    max-width: 12.5rem;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    gap: 1rem;
+    
+}
+.social-con{
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+.footer-container{
+    padding-top: 1.2rem;
+}
+.social-container{
+    display: flex;
+    justify-content: center;
+    animation: slideIn 8s;
+}
+.footer p {
+    text-align: center;
+}
+.socials img:hover{
+    animation: rotate 3s infinite;
+}
+@keyframes rotate {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+}
+#copyright{
+    background-color: #D7E4C0;
+    animation: slideIn 8s;
+}
+}
+@media (min-width:400px) {
+    .nav-pills{
+        flex-direction: row;
+    }
+}
+
+@media (min-width:600px) {
+    html, body {
+        font-size: 15px;
+    }
+    .form-grid {
+        gap: 1.2rem;
+        display: grid;
+        grid-template-columns: minmax(100px, 200px);
+    }
+    .textarea{
+        width: 350px;
+    }
+    .nav-pills{
+        flex-direction: row;
+    }
+}
+
+@media (min-width:900px) {
+    html, body {
+        font-size: 16px;
+    }
+    .container{
+        flex-direction: row;
+    }
+    .name-box{
+        min-width: 200px;
+        max-width: 500px;
+    }
+    .grid-container{
+        max-width: 100%;
+        display: flex; 
+    }
+    .grid{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+    .projects-con{
+        min-width: 300px;
+        max-width: 800px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+    .project-box img {
+        height: 250px;
+    }
+    .form-grid{
+        min-width: 200px;
+        max-width: 700px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .textarea{
+        grid-column: span 2;
+        width: 500px;
+    }
+    .subject{
+        grid-area: 3/1/4/2;
+    }
+    #about{
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}
